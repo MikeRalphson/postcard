@@ -10,6 +10,15 @@
     text-align: center;
     font-family: 'Indie Flower', cursive;
   }
+  a {
+    color: inherit;
+    /* border-bottom: solid 1px;
+    text-decoration: none; */
+    text-decoration-style: wavy;
+  }
+  a:hover {
+    color: darkgreen;
+  }
   .pc {
     width: 640;
     height: 480;
@@ -18,6 +27,9 @@
   @media only screen 
     and (min-width: 800px) {
     .pc {
+      margin-left: 200;
+    }
+    audio {
       margin-left: 200;
     }
   }
@@ -37,10 +49,10 @@
   .text {
     font-family: 'Indie Flower', cursive;
     font-size: 22px;
-    width: 280px;
-    margin-top: 140px;
+    width: 260px;
+    margin-top: 130px;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
     display: inline-block;
   }
   .left {
@@ -91,11 +103,15 @@
   </div>
   <div class="pc hidden" id="back" data-tooltip="Click to flip me back!">
     <div class="imgFill" style="--background: url('images/back01.jpeg')">
-    <br/>
-    <span class="text left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-    </span>
-    <span class="text right">To our friends at home</span>
+      <br/>
+      <span class="text left">Lorem ipsum <a href="https://bbc.co.uk">dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      </span>
+      <span class="text right">To our friends at home</span>
+    </div>
   </div>
+
+  <br/>
+  <audio controls autoplay="true" loop="true" src="audio/audio01.mp3"></audio>
 
   <script>
     $(document).ready(function(){
