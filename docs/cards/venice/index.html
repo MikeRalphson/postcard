@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>You have a new lockdown postcard from Claire &amp; Mikey!</title>
@@ -100,17 +101,17 @@
 </head>
 <body>
   <h1>You have a new lockdown postcard from Claire &amp; Mikey...</h1>
-  <h2>Postmarked Venice on 2021-02-22!</h2>
+  <h2>Postmarked Venice on 2021-02-16!</h2>
   <div class="pc portrait" id="front" data-tooltip="Click to flip me over!">
-    <div class="imgFill" style="--background: url('../../images/front3.jpeg')">
+    <div class="imgFill" style="--background: url('../../images/front4.jpeg')">
     </div>
   </div>
   <div class="pc hidden" id="back" data-tooltip="Click to flip me back!">
-    <div class="imgFill" style="--background: url('../../images/back3.jpeg')">
+    <div class="imgFill" style="--background: url('../../images/back4.jpeg')">
       <br/>
       <span class="text left">Lorem ipsum <a href="https://bbc.co.uk">dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
       </span>
-      <span class="text right">To our friends at home</span>
+      <span class="text right" id="addy">To our friends at home</span>
     </div>
   </div>
 
@@ -118,10 +119,12 @@
   
   <a href="/">Home...</a>
   
-  <audio controls autoplay="true" loop="true" src="../../audio/audio3.mp3"
+  <audio controls autoplay="true" loop="true" src="../../audio/audio4.mp3"
     data-tooltip="https://sound-effects.bbcrewind.co.uk/licensing"></audio>
 
   <script>
+
+    const address = {"ff":"The festival family","sm":"Saz, Mike and Elsa","nt":"Niki & Toby","lm":"Laura, Mark and Jasper","ld":"Lynn & Doug"};
 
     function rotatePic(selector, from, to, callback) {
       jQuery({deg: from}).animate(
@@ -136,7 +139,18 @@
       );
     }
 
+    function getCookie(key) {
+      var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+      return keyValue ? keyValue[2] : null;
+    }
+
     $(document).ready(function(){
+
+      let cookie = getCookie('address');
+      if (cookie) {
+        $('#addy').html(address[cookie]);
+      }
+
       $(".imgFill").on("click",function(){
         const picture = $(this);
         let id;

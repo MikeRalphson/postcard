@@ -1,5 +1,12 @@
 [
-  { "location": "Paris", "date": "2021-02-21", "index": 1 },
-  { "location": "Venice", "date": "2021-02-22", "index": 3 },
-  { "location": "Morocco", "date": "2021-02-23", "index": 2 }
+  { "location": "Newbury", "date": "2021-02-06", "index": 0 },
+  { "location": "Paris", "date": "2021-02-13", "index": 1 },
+  { "location": "Avignon", "date": "2021-02-14", "index": 2 },
+  { "location": "Lake Lucerne", "date": "2021-02-15", "index": 3 },
+  { "location": "Venice", "date": "2021-02-16", "index": 4 },
+  { "location": "Pisa", "date": "2021-02-17", "index": 5 },
+  { "location": "Ajaccio", "date": "2021-02-18", "index": 6 },
+  { "location": "Barcelona", "date": "2021-02-19", "index": 7 },
+  { "location": "Seville", "date": "2021-02-20", "index": 8 },
+  { "location": "Casablanca", "date": "2021-02-21", "index": 9 }
 ]
