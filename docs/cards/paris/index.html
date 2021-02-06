@@ -93,7 +93,7 @@
     z-index: 9999;
   }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.0/cash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <h1>You have a new lockdown postcard from Claire &amp; Mikey!</h1>
@@ -117,19 +117,36 @@
     data-tooltip="https://sound-effects.bbcrewind.co.uk/licensing"></audio>
 
   <script>
+
+    function rotatePic(selector, callback) {
+      jQuery({deg: 0}).animate(
+        {deg: 90},  
+        {always: callback, duration: 500, easing : 'linear', 
+         step: function(now, fx){
+           jQuery(selector).css({
+             'transform':'rotate('+now+'deg)'
+           });
+         }
+        }
+      );
+    }
+
     $(document).ready(function(){
       $(".imgFill").on("click",function(){
-        $('.pc').addClass('hidden');
+        const picture = $(this);
         let id;
-        $(this).parent().each(function(e){
+        picture.parent().each(function(e){
           id = $(this).attr('id');
         });
-        $('.pc').each(function(){
-          if ($(this).attr('id') !== id) {
-            $(this).removeClass("hidden");
-          }
+        rotatePic('#'+id,function(){
+          $('.pc').addClass('hidden');
+          $('.pc').each(function(){
+            if ($(this).attr('id') !== id) {
+              $(this).removeClass("hidden");
+            }
+          });
         });
-      });
+      })
     });
   </script>
 </body>

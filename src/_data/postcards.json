@@ -1,4 +1,5 @@
 [
   { "location": "Paris", "date": "2021-02-21", "index": 1 },
-  { "location": "Loire Valley", "date": "2021-02-22", "index": 2 }
+  { "location": "Venice", "date": "2021-02-22", "index": 3 },
+  { "location": "Morocco", "date": "2021-02-23", "index": 2 }
 ]
