@@ -22,7 +22,10 @@
   .pc {
     width: 640;
     height: 480;
-    /* outline: 0.01em solid black; */
+  }
+  .pc.portrait {
+    width: 480;
+    height: 640;
   }
   @media only screen 
     and (min-width: 800px) {
@@ -96,9 +99,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-  <h1>You have a new lockdown postcard from Claire &amp; Mikey!</h1>
-  <h2>{{ card.location }} on {{ card.date }}</h2>
-  <div class="pc" id="front" data-tooltip="Click to flip me over!">
+  <h1>You have a new lockdown postcard from Claire &amp; Mikey...</h1>
+  <h2>Postmarked {{ card.location }} on {{ card.date }}!</h2>
+  <div class="pc portrait" id="front" data-tooltip="Click to flip me over!">
     <div class="imgFill" style="--background: url('../../images/front{{ card.index}}.jpeg')">
     </div>
   </div>
@@ -123,7 +126,7 @@
     function rotatePic(selector, from, to, callback) {
       jQuery({deg: from}).animate(
         {deg: to},  
-        {always: callback, duration: 500, easing : 'linear', 
+        {always: callback, duration: 250, easing : 'swing', 
          step: function(now, fx){
            jQuery(selector).css({
              'transform':'rotate('+now+'deg)'
@@ -142,10 +145,10 @@
         });
         let from = 0;
         let to = 90;
-        if (id === 'back') {
-          from = 180;
-          to = 0; 
-        }
+        //if (id === 'back') {
+        //  from = 0;
+        //  to = 90; 
+        //}
         rotatePic('#'+id,from,to,function(){
           $('.pc').addClass('hidden');
           $('.pc').css('transform','none');
