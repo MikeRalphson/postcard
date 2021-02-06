@@ -118,9 +118,9 @@
 
   <script>
 
-    function rotatePic(selector, callback) {
-      jQuery({deg: 0}).animate(
-        {deg: 90},  
+    function rotatePic(selector, from, to, callback) {
+      jQuery({deg: from}).animate(
+        {deg: to},  
         {always: callback, duration: 500, easing : 'linear', 
          step: function(now, fx){
            jQuery(selector).css({
@@ -138,8 +138,15 @@
         picture.parent().each(function(e){
           id = $(this).attr('id');
         });
-        rotatePic('#'+id,function(){
+        let from = 0;
+        let to = 90;
+        if (id === 'back') {
+          from = 180;
+          to = 0; 
+        }
+        rotatePic('#'+id,from,to,function(){
           $('.pc').addClass('hidden');
+          $('.pc').css('transform','none');
           $('.pc').each(function(){
             if ($(this).attr('id') !== id) {
               $(this).removeClass("hidden");
