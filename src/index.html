@@ -66,7 +66,7 @@
 
 <ul>
 {% for postcard in postcards %}
-  <li class="hidden" data-date="{{postcard.date}}"><a href="/cards/{{ postcard.location | slug }}">{{ postcard.location}} on {{ postcard.date }}</a></li>
+  <li class="hidden" data-date="{{postcard.date}}"><a href="cards/{{ postcard.location | slug }}">{{ postcard.location}} on {{ postcard.date }}</a></li>
 {% endfor %}
 </ul>
 
