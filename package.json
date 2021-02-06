@@ -1,0 +1,25 @@
+{
+  "name": "postcard",
+  "version": "1.0.0",
+  "description": "* Sound effects from the BBC archive https://sound-effects.bbcrewind.co.uk/licensing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "DEBUG=Eleventy* npx eleventy --input=./src --output=./_site",
+    "build": "npx eleventy --input=./src --output=./docs",
+    "serve": "npx eleventy --serve --input=./src --output=./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeRalphson/postcard.git"
+  },
+  "author": "Mike Ralphson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MikeRalphson/postcard/issues"
+  },
+  "homepage": "https://github.com/MikeRalphson/postcard#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}

@@ -1,0 +1,10 @@
+---
+pagination:
+  data: postcards
+  size: 1
+  alias: card
+permalink: "cards/{{ card.location | slug }}/"
+layout: postcard
+---
+
+{{ content }}

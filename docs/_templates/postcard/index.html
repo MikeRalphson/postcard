@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>You have a new lockdown postcard from Claire &amp; Mikey!</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+
+<style>
+  h1 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+  }
+  a {
+    color: inherit;
+    /* border-bottom: solid 1px;
+    text-decoration: none; */
+    text-decoration-style: wavy;
+  }
+  a:hover {
+    color: darkgreen;
+  }
+  .pc {
+    width: 640;
+    height: 480;
+    /* outline: 0.01em solid black; */
+  }
+  @media only screen 
+    and (min-width: 800px) {
+    .pc {
+      margin-left: 200;
+    }
+    audio {
+      margin-left: 200;
+    }
+  }
+  .imgFill {
+    height: 100%;
+    width: 100%;
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-size: /*cover;*/ contain;
+  }
+  /*.background {
+    z-index: -1;
+  }*/
+  .hidden {
+    display: none;
+  }
+  .text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22px;
+    width: 260px;
+    margin-top: 130px;
+    margin-left: 20px;
+    margin-right: 30px;
+    display: inline-block;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+    margin-top: 200px;
+  }
+
+  [data-tooltip]:hover {
+    position: relative;
+  }
+
+  [data-tooltip]:hover:before {
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+
+    border-radius: 5px;
+
+    color: #FFFFFF;
+    font-size: 12px;
+    content: attr(data-tooltip);
+
+    margin-bottom: 10px;
+    top: 10%;
+    left: 0;    
+    padding: 7px 12px;
+    position: absolute;
+    width: auto;
+    min-width: 50px;
+    max-width: 300px;
+    word-wrap: break-word;
+
+    z-index: 9999;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.0/cash.min.js"></script>
+</head>
+<body>
+  <h1>You have a new lockdown postcard from Claire &amp; Mikey!</h1>
+  <br/>
+  <div class="pc" id="front" data-tooltip="Click to flip me over!">
+    <div class="imgFill" style="--background: url('images/front01.jpeg')">
+    </div>
+  </div>
+  <div class="pc hidden" id="back" data-tooltip="Click to flip me back!">
+    <div class="imgFill" style="--background: url('images/back01.jpeg')">
+      <br/>
+      <span class="text left">Lorem ipsum <a href="https://bbc.co.uk">dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      </span>
+      <span class="text right">To our friends at home</span>
+    </div>
+  </div>
+
+  <br/>
+  <audio controls autoplay="true" loop="true" src="audio/audio01.mp3"
+    data-tooltip="https://sound-effects.bbcrewind.co.uk/licensing"></audio>
+
+  <script>
+    $(document).ready(function(){
+      $(".imgFill").on("click",function(){
+        $('.pc').addClass('hidden');
+        let id;
+        $(this).parent().each(function(e){
+          id = $(this).attr('id');
+        });
+        $('.pc').each(function(){
+          if ($(this).attr('id') !== id) {
+            $(this).removeClass("hidden");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+

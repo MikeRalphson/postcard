@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
 
 <style>
-  h1 {
+  h1,h2 {
     text-align: center;
     font-family: 'Indie Flower', cursive;
   }
@@ -47,10 +47,11 @@
     display: none;
   }
   .text {
+    position: relative;
     font-family: 'Indie Flower', cursive;
     font-size: 22px;
     width: 260px;
-    margin-top: 130px;
+    margin-top: 110px;
     margin-left: 20px;
     margin-right: 30px;
     display: inline-block;
@@ -60,7 +61,7 @@
   }
   .right {
     float: right;
-    margin-top: 200px;
+    margin-top: 195px;
   }
 
   [data-tooltip]:hover {
@@ -96,13 +97,13 @@
 </head>
 <body>
   <h1>You have a new lockdown postcard from Claire &amp; Mikey!</h1>
-  <br/>
+  <h2>Loire Valley on 2021-02-22</h2>
   <div class="pc" id="front" data-tooltip="Click to flip me over!">
-    <div class="imgFill" style="--background: url('images/front01.jpeg')">
+    <div class="imgFill" style="--background: url('/images/front2.jpeg')">
     </div>
   </div>
   <div class="pc hidden" id="back" data-tooltip="Click to flip me back!">
-    <div class="imgFill" style="--background: url('images/back01.jpeg')">
+    <div class="imgFill" style="--background: url('/images/back2.jpeg')">
       <br/>
       <span class="text left">Lorem ipsum <a href="https://bbc.co.uk">dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
       </span>
@@ -111,7 +112,8 @@
   </div>
 
   <br/>
-  <audio controls autoplay="true" loop="true" src="audio/audio01.mp3"></audio>
+  <audio controls autoplay="true" loop="true" src="/audio/audio2.mp3"
+    data-tooltip="https://sound-effects.bbcrewind.co.uk/licensing"></audio>
 
   <script>
     $(document).ready(function(){
