@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/audio");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   return {
     dir: {
       // ⚠️ These values are both relative to your input directory.

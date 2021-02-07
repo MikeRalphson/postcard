@@ -7,6 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
 
 <style>
+  body {
+    background-image: url('../../images/texture.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   h1,h2 {
     text-align: center;
     font-family: 'Indie Flower', cursive;
@@ -21,6 +26,7 @@
   .pc {
     width: 640px;
     height: 480px;
+    /* transition: all 0.125s linear; */
   }
   .pc.portrait {
     width: 480px;
@@ -100,7 +106,7 @@
 <body>
   <h1>You have a new lockdown postcard from Claire &amp; Mikey...</h1>
   <h2>Postmarked Lake Lucerne on 2021-02-15!</h2>
-  <div class="pc portrait" id="front" data-tooltip="Click to flip me over!">
+  <div class="pc landscape" id="front" data-tooltip="Click to flip me over!">
     <div class="imgFill" style="--background: url('../../images/front3.jpeg')">
     </div>
   </div>
@@ -124,13 +130,13 @@
 
     const address = {"ff":"The festival family","sm":"Saz, Mike and Elsa","nt":"Niki & Toby","lm":"Laura, Mark and Jasper","ld":"Lynn & Doug"};
 
-    function rotatePic(selector, from, to, callback) {
+    function rotatePic(selector, from, to, prop, callback) {
       jQuery({deg: from}).animate(
         {deg: to},  
-        {always: callback, duration: 250, easing : 'swing', 
+        {always: callback, duration: 500, easing : 'swing', 
          step: function(now, fx){
            jQuery(selector).css({
-             'transform':'rotate('+now+'deg)'
+             'transform':prop+'('+now+'deg)'
            });
          }
         }
@@ -151,25 +157,25 @@
 
       $(".imgFill").on("click",function(){
         const picture = $(this);
-        let id;
+        let id,card;
         picture.parent().each(function(e){
+          card = $(this);
           id = $(this).attr('id');
         });
         let from = 0;
         let to = 90;
-        //if (id === 'back') {
-        //  from = 0;
-        //  to = 90; 
-        //}
-        rotatePic('#'+id,from,to,function(){
+        const callback = function(){
           $('.pc').addClass('hidden');
           $('.pc').css('transform','none');
           $('.pc').each(function(){
             if ($(this).attr('id') !== id) {
               $(this).removeClass("hidden");
+              $('.pc').css('transform','none');
             }
           });
-        });
+        };
+        if (card.hasClass('portrait')) rotatePic('#'+id,from,to,'rotate',callback)
+        else rotatePic('#'+id,from,to,'rotateY',callback);
       })
     });
   </script>
