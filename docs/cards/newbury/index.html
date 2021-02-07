@@ -133,8 +133,12 @@
         {deg: to},  
         {always: callback, duration: 500, easing : 'swing', 
          step: function(now, fx){
+           let transform = 'rotateX('+now+'deg) rotateZ('+now+'deg)';
+           if (prop === 'rotateY') {
+             transform = 'rotate('+now+'deg) rotateY('+now+'deg) rotateZ('+now+'deg)';
+           }
            jQuery(selector).css({
-             'transform':prop+'('+now+'deg)'
+             'transform':transform
            });
          }
         }
