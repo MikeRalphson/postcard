@@ -1,7 +1,7 @@
 [
   { "location": "Newbury", "date": "2521-02-22", "index": 0, "orient": "landscape" },
   { "location": "Paris", "date": "2021-02-13", "index": 1, "orient": "portrait" , "text": "Just got off the Eurostar in Paris, and it's as cold here as it is in Newbury, with snow on the ground!<br>But we've picked up cheese and wine from the Monoprix and are heading up to the steps of the Sacre Coeur for a wintry picnic.<br>à bientôt mes amis! x" },
-  { "location": "Avignon", "date": "2021-02-14", "index": 2, "orient": "portrait" },
+  { "location": "Avignon", "date": "2021-02-14", "index": 2, "orient": "portrait", "text":"<br><br><br>Bonjour! We got the TGV down to Avignon, early enough to catch the flea market. We had moules and frites with a fantastic view of the Pont Saint-Benezet, and later we're getting the petite train to see the sights. Love you xx" },
   { "location": "Lake Lucerne", "date": "2021-02-15", "index": 3, "orient": "landscape" },
   { "location": "Venice", "date": "2021-02-16", "index": 4, "orient": "portrait" },
   { "location": "Pisa", "date": "2021-02-17", "index": 5, "orient": "portrait" },
