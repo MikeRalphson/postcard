@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  h1,h2 {
+  h1,h2,h3 {
     text-align: center;
     font-family: 'Indie Flower', cursive;
   }
@@ -57,7 +57,7 @@
   .text {
     position: relative;
     font-family: 'Indie Flower', cursive;
-    font-size: 22px;
+    font-size: 18px;
     width: 260px;
     margin-top: 110px;
     margin-left: 20px;
@@ -106,14 +106,15 @@
 <body>
   <h1>You have a new lockdown postcard from Claire &amp; Mikey...</h1>
   <h2>Postmarked Seville on 2021-02-20!</h2>
-  <div class="pc landscape" id="front" data-tooltip="Click to flip me over!">
+  <h3>Click the card to flip it over.</h3>
+  <div class="pc landscape" id="front" data-xtooltip="Click to flip me over!">
     <div class="imgFill" style="--background: url('../../images/front8.jpeg')">
     </div>
   </div>
-  <div class="pc hidden" id="back" data-tooltip="Click to flip me back!">
+  <div class="pc hidden" id="back" data-xtooltip="Click to flip me back!">
     <div class="imgFill" style="--background: url('../../images/back8.jpeg')">
       <br/>
-      <span class="text left">Lorem ipsum <a href="https://bbc.co.uk">dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      <span class="text left">
       </span>
       <span class="text right" id="addy">To our friends at home</span>
     </div>
@@ -128,7 +129,7 @@
 
   <script>
 
-    const address = {"ff":"The festival family","sm":"Saz, Mike and Elsa","nt":"Niki & Toby","lm":"Laura, Mark and Jasper","ld":"Lynn & Doug"};
+    const address = {"ff":"The festival family","sm":"Saz, Mike and Elsa","nt":"Niki & Toby","lm":"Laura, Mark and Jasper","ld":"Lyn & Doug"};
 
     function rotatePic(selector, from, to, prop, callback) {
       jQuery({deg: from}).animate(
