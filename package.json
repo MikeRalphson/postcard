@@ -21,5 +21,8 @@
   "homepage": "https://github.com/MikeRalphson/postcard#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1"
+  },
+  "dependencies": {
+    "eleventy-plugin-seo": "^0.5.1"
   }
 }

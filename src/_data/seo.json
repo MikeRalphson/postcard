@@ -1,0 +1,11 @@
+{
+  "title": "Claire & Mikey's Lockdown Tour",
+  "description": "Virtual European Holiday 2021",
+  "url": "https://mikeralphson.github.io/postcard",
+  "author": "Mike Ralphson",
+  "twitter": "permittedsoc",
+  "image": "/images/logo.jpeg",
+  "options": {
+    "imageWithBaseUrl": true
+  }
+}
