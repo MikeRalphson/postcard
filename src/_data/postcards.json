@@ -6,8 +6,10 @@
 "Greetings from Lake Lucerne! We took the overnight train, woke up among the snowy mountains. We're going to try to get to the peak at 2,128m of Mount Pilatus. Probably take the cable car! Trip to the <a href=\"https://www.luzern.com/en/things-to-do/art-culture/museums-castles/glacier-garden/\">glacier garden</a> later to see potholes formed during the last ice-age! xx" },
   { "location": "Venice", "date": "2021-02-16", "index": 4, "orient": "portrait", "text": 
 "Last day of carnivale! Venice is as stunning as ever. Our favourite pizza place is still there and the karaoke is just a raucous as we remembered. If you don't know the words, you have to clap. It's easy to find, it's near a square, past a bridge over a canal! Hope to drink in some of the carnival atmosphere this evening. xxx" },
-  { "location": "Pisa", "date": "2021-02-17", "index": 5, "orient": "portrait" },
-  { "location": "Ajaccio", "date": "2021-02-18", "index": 6, "orient": "portrait" },
+  { "location": "Pisa", "date": "2021-02-17", "index": 5, "orient": "portrait", "text": 
+"Pizzas and piazzas in Pisa! Sorry our postcard is a little late, we've been busy exploring. Fabulous meal including a lovely tiramisu to round off the evening. Missing you all though. xx" },
+  { "location": "Ajaccio", "date": "2021-02-18", "index": 6, "orient": "portrait", "text": 
+"Off to Sant Antonio this morning, beautiful cobbled streets. Filitosa this afternoon, granite standing stones dating from 6,000 years ago! They were recarved during the bronze-age to feature detailed faces and weaponry, maybe representing real individuals. Great for history junkies. xxx" },
   { "location": "Barcelona", "date": "2021-02-19", "index": 7, "orient": "landscape" },
   { "location": "Seville", "date": "2021-02-20", "index": 8, "orient": "landscape" },
   { "location": "Casablanca", "date": "2021-02-21", "index": 9, "orient": "portrait" }
