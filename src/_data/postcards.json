@@ -12,6 +12,7 @@
 "Off to Sant Antonio this morning, beautiful cobbled streets. Filitosa this afternoon, granite standing stones dating from 6,000 years ago! They were recarved during the bronze-age to feature detailed faces and weaponry, maybe representing real individuals. Great for history junkies. xxx" },
   { "location": "Barcelona", "date": "2021-02-19", "index": 7, "orient": "landscape", "text":
 "Hipster 'steel donkey' bike tour of the city to find our bearings, then Palo Alto market for crafty, fashiony, vintage goodies. Finishing the day at the Elephanta gin bar in Cocteleria for a night-cap.<br>Love, Claire & Mikey xx" },
-  { "location": "Seville", "date": "2021-02-20", "index": 8, "orient": "landscape" },
+  { "location": "Seville", "date": "2021-02-20", "index": 8, "orient": "landscape", "text":
+"Greetings from sunny Seville! Having reached the tip of Europe, the temperature is touching 18 degrees in the afternoon. We're off to the Parque de Maria Luisa for a picnic in the shade by the river. In the evening we're hitting Taberna Gonzalo Molina to listen to an authentic flamenco jam, and blend in with the locals! Ole! xx" },
   { "location": "Casablanca", "date": "2021-02-21", "index": 9, "orient": "portrait" }
 ]
